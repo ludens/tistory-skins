@@ -25,8 +25,17 @@
 
 		<div class="blogMenu">[##_blog_menu_##]</div> <!-- 메뉴 -->
 		<div class="clear"></div>
-
+		
 		<div id="wrapper">
+			<div class="leftCol"> <!-- 왼쪽 메뉴 -->
+				<ul>
+					<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp">Reference</a></li>
+					<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp">Intelligence</a></li>
+					<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp">News</a></li>
+					<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp">Help</a></li>
+				</ul>
+			</div>
+
 			<div id="sidebar"> <!-- 사이드바 -->
 				<s_sidebar>
 					<s_sidebar_element> 
@@ -415,7 +424,7 @@
 										<s_rp_member>
 											<s_rp_guest>
 												<p>
-													<label for="name">이름</label><input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+													<span><label for="name">이름</label><input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" /></span>
 													<span class="password"><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" /></span>
 													<label for="homepage">홈페이지</label><input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/>
 												</p>

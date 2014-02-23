@@ -16,26 +16,41 @@ body { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body
 /* 블로그 메뉴 */
 .blogMenu { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_gnb.png'); }
 .blogMenu ul { border-right: 1px solid #c9c9c9; width: 100%; overflow: hidden; border-bottom: 1px solid #c6c6c6; }
-.blogMenu li { text-align: center; float: left; }
+.blogMenu li { text-align: center; float: left; width: 25%; max-width:240px; }
 .blogMenu li.first { border-left: 1px solid #c9c9c9; }
-.blogMenu li a { display: block; height: 44px; line-height: 44px; width: 240px; color: #333; font-size: 13px; font-weight: 700; border-left: 1px solid #f7f6f7; border-right: 1px solid #c9c9c9; border-top: 1px solid #c9c9c9; }
+.blogMenu li a { display: block; height: 44px; line-height: 44px; width: 100%; color: #333; font-size: 13px; font-weight: 700; border-left: 1px solid #f7f6f7; border-right: 1px solid #c9c9c9; border-top: 1px solid #c9c9c9; }
 .blogMenu li a:hover { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_gnb_on.png'); color: #fff; box-shadow: 0 1px #cecdcd; -moz-box-shadow: 0 1px #cecdcd; -webkit-box-shadow: 0 1px #cecdcd; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=-180, Color='#cecdcd'); border-top: 1px solid #e04e32; border-bottom: 1px solid #911a03; border-left: 0; }
 .blogMenu li a:hover:after { content: " "; background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bul_gnb_on.png') no-repeat 5px 0; padding-left: 25px; padding-top: 2px; }
 
 #wrapper { background: #fff; overflow: hidden; border: 1px solid #d1d1d1; border-top: 0; }
 
+/* 왼쪽메뉴 */
+.leftCol { width: 7%; max-width: 75px; float: left; border-right: 1px solid #eaeaea; background: #eaeaea; text-align: center; padding-top: 20px; }
+.leftCol li { margin-bottom: 15px; }
+.leftCol a { display: block; font-weight: 700; background-position: center 0; background-repeat: no-repeat; padding: 40px 5px 10px; letter-spacing: -1px; }
+.leftCol a:hover { color: #dc0000; }
+.leftCol .reference a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support1.png'); }
+.leftCol .intelligence a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support2.png'); }
+.leftCol .news a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3.png'); }
+.leftCol .help a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support4.png'); }
+.leftCol .reference a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support1_on.png'); }
+.leftCol .intelligence a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support2_on.png'); }
+.leftCol .news a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3_on.png'); }
+.leftCol .help a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support4_on.png'); }
+
 /* 사이드바 */
-#sidebar { width: 240px; float: left; padding: 30px 20px 0; border-right: 1px solid #eceaea; background: #fbfbfb; }
+#sidebar { width:18%; max-width: 165px; float: left; padding: 30px 20px 0; border-right: 1px solid #eceaea; background: #fbfbfb; }
 #sidebar .widget h3 { color: #333; padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid #e6e6e6; font-size: 14px; }
 
 /* 사이드바 - 카테고리 */
 .category #category_0,.category .ib { display: none; }
 .category table table { width: 100%; }
 .category .branch3 { cursor: pointer; font-weight: 700; padding: 10px 20px 10px 0; background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bul_list.png') no-repeat 100% center; }
-.category .branch3:hover { color: #dc0000 !important; background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bul_list_on.png'); }
+.category .branch3:hover,.category table[style="color: rgb(220, 0, 0);"] .branch3 { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bul_list_on.png'); }
+.category .branch3:hover div { color: #dc0000 !important; }
 
 /* 컨텐츠 */
-#content { width: 780px; float: left; }
+#content { width: 75%; max-width: 780px; float: left; }
 #content .entry { margin: 20px 25px; }
 
 /* 글 상단 */
@@ -98,6 +113,10 @@ div.article { padding: 30px 20px; border-top: 0; margin-bottom: 5px; }
 .commentWrite textarea { width: 100%; }
 .commentWrite input[type="submit"] { margin: 0 auto; cursor: pointer; }
 .commentWrite .secretWrap { text-align: right; }
+@media only screen and (max-width : 1024px) {
+.commentWrite p span { display: block; }
+.commentWrite p .password { margin: 0.5em 0; }
+ }
 
 /* 페이징 */
 .paging { text-align: center; }
