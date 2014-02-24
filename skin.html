@@ -29,10 +29,10 @@
 		<div id="wrapper">
 			<div class="leftCol"> <!-- 왼쪽 메뉴 -->
 				<ul>
-					<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp">Reference</a></li>
-					<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp">Intelligence</a></li>
-					<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp">News</a></li>
-					<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp">Help</a></li>
+					<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp" target="_blank">Reference</a></li>
+					<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp" target="_blank">Intelligence</a></li>
+					<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp" target="_blank">News</a></li>
+					<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">Help</a></li>
 				</ul>
 			</div>
 
@@ -180,59 +180,94 @@
 
 			<div id="content"> <!-- 컨텐츠 -->
 				<s_list> <!-- 글 검색 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>검색결과</strong></li>
+							</ul>
+						</div>
+						<div class="subject">검색결과</div>
+					</div>
+
 					<div class="searchList">
-						<h3>'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h3>
-						<ol><s_list_rep><li><span class="date">[##_list_rep_regdate_##]</span> <a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a> <span class="cnt">[##_list_rep_rp_cnt_##]</span></li></s_list_rep></ol>
+						<h3>'<span class="highlight">[##_list_conform_##]</span>' 검색어에 대한 검색 결과입니다.<!-- [##_list_count_##]건 --></h3>
+						<ol class="box"><li class="searchListTitle">검색결과</li><s_list_rep><li><a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a> <span class="cnt">[##_list_rep_rp_cnt_##]</span><p class="date">[##_list_rep_regdate_##]</p></li></s_list_rep></ol>
 					</div>
 				</s_list>
 
-				<s_rplist> <!-- 댓글검색(코드는 있으나 안쓰임) -->
-					<div class="searchRplist">
-						<h3>'[##_rplist_conform_##]'에 해당되는 댓글 [##_rplist_count_##]건</h3>
-						<ol><s_rplist_rep><li><span class="date">[##_rplist_rep_regdate_##]</span> <a href="[##_rplist_rep_link_##]">[##_rplist_rep_body_##]</a> <span class="cnt">[##_rplist_rep_rp_cnt_##]</span> <span class="name">[##_rplist_rep_name_##]</span></li></s_rplist_rep></ol>
-					</div>
-				</s_rplist>
-
 				<s_local> <!-- 위치로그 -->
-					<div class="localog">
+					<script type="text/javascript">window.location.href = "[##_blog_link_##]"</script> <!-- 위치로그 접근시 메인화면으로 리다이렉트 -->
+					<!-- <div class="localog">
 						<h3>위치로그</h3>
 						<s_local_spot_rep><div class="spot" style="margin-left: [##_local_spot_depth_##]px">[##_local_spot_##]</div></s_local_spot_rep>
 						<s_local_info_rep><div class="info" style="margin-left: [##_local_info_depth_##]px"><a href="[##_local_info_link_##]">[##_local_info_title_##]</a></div></s_local_info_rep>
-					</div>
+					</div> -->
 				</s_local>
 
 				<s_tag> <!-- 태그로그 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>태그로그</strong></li>
+							</ul>
+						</div>
+						<div class="subject">태그</div>
+					</div>
+
 					<div class="taglog">
-						<h3>태그</h3>
 						<ul><s_tag_rep><li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li></s_tag_rep></ul>
 					</div>
 				</s_tag>
 
+				<s_media> <!-- 미디어로그 -->
+					<script type="text/javascript">window.location.href = "[##_blog_link_##]"</script> <!-- 미디어로그 접근시 메인화면으로 리다이렉트 -->
+					<!-- <div class="medialog">
+						<h3>미디어로그</h3>
+						[##_media_content_##]
+					</div> -->
+				</s_media>
+
 				<s_guest> <!-- 방명록 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>질문하기</strong></li>
+							</ul>
+						</div>
+						<div class="subject">질문하기</div>
+					</div>
+
 					<div class="guestbook">
-						<h3>방명록</h3>
 							<s_guest_input_form> <!-- 방명록 입력 -->
 								<div class="guestWrite">
 									<s_guest_member>
 										<s_guest_form>
-											<p><label for="name">이름</label><input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" /></p>
-											<p><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" /></p>
-											<p><label for="homepage">홈페이지</label><input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" /></p>
+											<p>
+												<span><label for="name">이름</label><input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" /></span>
+												<span class="password"><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" /></span>
+												<span><label for="homepage">홈페이지</label><input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" /></span>
+											</p>
 										</s_guest_form>
 									</s_guest_member>
-									<p><textarea name="[##_guest_textarea_body_##]" cols="50" rows="6"></textarea></p>
-									<p><input type="submit" value="안부 남기기" onclick="[##_guest_onclick_submit_##]"/></p>
+									<p><textarea name="[##_guest_textarea_body_##]" rows="5"></textarea></p>
+									<p><input class="btn_gray" type="submit" value="질문 남기기" onclick="[##_guest_onclick_submit_##]"/></p>
 								</div>
 							</s_guest_input_form>
 							<s_guest_container> <!-- 방명록 출력 -->
 								<div class="guestList">
-									<ol> 
+									<ol class="box"> 
 										<s_guest_rep>
 											<li id='[##_guest_rep_id_##]'>
 												<div class="[##_guest_rep_class_##]">
 													<span class="name">[##_guest_rep_name_##]</span> 
-													<span class="date"> [##_guest_rep_date_##]</span> 
 													<span class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE</a>  <a href="#" onclick="[##_guest_rep_onclick_reply_##]">REPLY</a></span>
+													<p class="date"> [##_guest_rep_date_##]</p>
 													<p>[##_guest_rep_desc_##]</p>
 												</div>
 												<s_guest_reply_container> <!-- 방명록 댓글 -->
@@ -292,7 +327,7 @@
 								<li><strong>[##_article_rep_title_##]</strong></li>
 							</ul>
 						</div>
-						<div class="subject">[##_article_rep_category_##]</div>
+						<div class="subject">블로그</div>
 					</div>
 
 					<div class="entry entryProtected">
@@ -426,7 +461,7 @@
 												<p>
 													<span><label for="name">이름</label><input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" /></span>
 													<span class="password"><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" /></span>
-													<label for="homepage">홈페이지</label><input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/>
+													<span><label for="homepage">홈페이지</label><input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/></span>
 												</p>
 											</s_rp_guest>
 											<p class="secretWrap"><input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" /><label for="secret"> 비밀글 </label></p>
@@ -469,7 +504,9 @@
 		</div>
 		<s_t3></s_t3> <!-- 티스토리 자바스크립트 -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
-		<script src="//cfs.tistory.com/custom/blog/37/377419/skin/images/equalize.min.js"></script> <!-- equalize.js -->
+		<script type='text/javascript'>$(function(){$('body').css({'min-height':(($(window).height()))+'px'});$(window).resize(function(){$('body').css({'min-height':(($(window).height()))+'px'})})});</script> <!-- body min-height 설정 -->
+		<script type='text/javascript'>$(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'});$(window).resize(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'})})});$(window).resize(function(){$('.leftCol').css({'min-height':(($(window).height()-130))+'px'})})});</script> <!-- 왼쪽메뉴 height 설정 -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"></script> <!-- equalize.js -->
 		<script>$('#wrapper').equalize();</script>
 	</body>
 </html>
