@@ -1,4 +1,4 @@
 tstore-tistory-skin
 ===================
 
-preview: http://ludensskintest.tistory.com
+Preview: http://ludensskintest.tistory.com
