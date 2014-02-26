@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[##_title_##] :: [##_page_title_##]</title> <!-- 타이틀 -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" /> <!-- RSS 주소 -->
+        <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" /> <!-- 블로그 파비콘 -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.14.1/build/cssreset/cssreset-min.css" /> <!-- CSS 리셋 -->
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <!-- Social -->
+        <meta property="og:title" content="[##_page_title_##] :: [##_title_##]"/> <!-- 페이스북 공유시 링크 제목 -->
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="[##_title_##]"/>
+        <meta property="og:image" content="[##_image_##]" /> <!-- 페이스북 공유시 링크 이미지 -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@SK_Tstore" /><!-- 트위터 공유시 저작자 표시 -->
+        <meta name="twitter:title" content="[##_page_title_##]" /><!-- 트위터 공유시 제목 표시 -->
+        <meta name="twitter:description" content="[##_desc_##]" /><!-- 트위터 공유시 내용 표시 -->
+    </head>
+
+	<body>
+		<div id="header"> <!-- 헤더 -->
+			<h1><a href="[##_blog_link_##]"><img src="[##_image_##]" alt="[##_title_##]" /></a></h1> <!-- 타이틀 -->
+		</div>
+
+		<div class="blogMenu">[##_blog_menu_##]</div> <!-- 메뉴 -->
+		<div class="clear"></div>
+		
+		<div id="wrapper">
+			<div class="leftCol"> <!-- 왼쪽 메뉴 -->
+				<ul>
+					<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp" target="_blank">Reference</a></li>
+					<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp" target="_blank">Intelligence</a></li>
+					<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp" target="_blank">News</a></li>
+					<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">Help</a></li>
+				</ul>
+			</div>
+
+			<div id="sidebar"> <!-- 사이드바 -->
+				<s_sidebar>
+					<s_sidebar_element> 
+					<!-- 블로그 정보 -->
+						<div class="blogInfo widget">
+							<div class="blogImage"><img src="[##_image_##]" alt="" /></div>
+							<div class="blogDesc">[##_desc_##] <span class="userID">[##_blogger_##]</span></div>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 공지사항 -->
+						<s_rct_notice>
+							<div class="notice widget">
+								<ul><s_rct_notice_rep><li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li></s_rct_notice_rep></ul>
+							</div>
+						</s_rct_notice>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 관리자 메뉴 -->
+						<div class="adminMenu widget">
+							<ul>
+								<li class="tab_admin"><a href="[##_owner_url_##]">관리자</a></li>
+								<li class="tab_write"><a href="[##_owner_url_##]/entry/post">글쓰기</a></li>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 검색 --> 
+						<div class="search widget"> 
+							<s_search>
+								<input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+								<input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit"/>
+							</s_search>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 카테고리 -->
+						<div class="category widget">
+							<h3>카테고리</h3>
+							[##_category_##]
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 태그 클라우드 -->
+						<div class="tagbox widget">
+							<h3>태그목록</h3>
+							<ul>
+								<s_random_tags><li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li></s_random_tags>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 최근에 올라온 글 -->
+						<div class="recentPost widget">
+							<h3>최근에 올라온 글</h3>
+							<ul>
+								<s_rctps_rep>
+									<li><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a> <span class="cnt">[##_rctps_rep_rp_cnt_##]</span></li>
+								</s_rctps_rep>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 최근에 달린 댓글 -->
+						<div class="recentComment widget">
+							<h3>최근에 달린 댓글</h3>
+							<ul id="recentComments">
+								<s_rctrp_rep>
+									<li>
+										<a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
+										<span class="info_wrap"><span class="name">[##_rctrp_rep_name_##]</span> <span class="date">[##_rctrp_rep_time_##]</span></span>
+									</li>
+								</s_rctrp_rep>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 최근에 받은 트랙백 -->
+						<div class="recentTrackback widget">
+							<h3>최근에 받은 트랙백</h3>
+							<ul>
+								<s_rcttb_rep>
+									<li>
+										<a href="[##_rcttb_rep_link_##]">[##_rcttb_rep_desc_##].</a>
+										<span class="info_wrap"><span class="name">[##_rcttb_rep_name_##]</span> <span class="date">[##_rcttb_rep_time_##]</span></span>
+									</li>
+								</s_rcttb_rep>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 글 보관함 -->
+						<div class="archive widget">
+							<h3>글 보관함</h3>
+							<ul>
+								<s_archive_rep>
+									<li><a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a> <span class="cnt">([##_archive_rep_count_##])</span></li>
+								</s_archive_rep>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 달력 -->
+						<div class="calender widget">
+							<h3>달력</h3>
+							[##_calendar_##]
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 링크 -->
+						<div class="link widget">
+							<h3>링크</h3>
+							<ul>
+								<s_link_rep>
+									<li><a href="[##_link_url_##]" onclick="window.open(this.href); return false">[##_link_site_##]</a></li>
+								</s_link_rep>
+							</ul>
+						</div>
+					</s_sidebar_element>
+
+					<s_sidebar_element>
+					<!-- 방문자수 -->
+						<div class="counte widgetr">
+							<span class="total">Total : [##_count_total_##] </span>
+							<span class="today">Today : [##_count_today_##]</span>
+							<span class="yesterday">Yesterday : [##_count_yesterday_##]</span>
+						</div>
+					</s_sidebar_element>
+				</s_sidebar>
+			</div>
+
+			<div id="content"> <!-- 컨텐츠 -->
+				<s_list> <!-- 글 검색 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>검색결과</strong></li>
+							</ul>
+						</div>
+						<div class="subject">검색결과</div>
+					</div>
+
+					<div class="searchList">
+						<h3>'<span class="highlight">[##_list_conform_##]</span>' 검색어에 대한 검색 결과입니다.<!-- [##_list_count_##]건 --></h3>
+						<ol class="box"><li class="searchListTitle">검색결과</li><s_list_rep><li><a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a> <span class="cnt">[##_list_rep_rp_cnt_##]</span><p class="date">[##_list_rep_regdate_##]</p></li></s_list_rep></ol>
+					</div>
+				</s_list>
+
+				<s_local> <!-- 위치로그 -->
+					<script type="text/javascript">window.location.href = "[##_blog_link_##]"</script> <!-- 위치로그 접근시 메인화면으로 리다이렉트 -->
+					<!-- <div class="localog">
+						<h3>위치로그</h3>
+						<s_local_spot_rep><div class="spot" style="margin-left: [##_local_spot_depth_##]px">[##_local_spot_##]</div></s_local_spot_rep>
+						<s_local_info_rep><div class="info" style="margin-left: [##_local_info_depth_##]px"><a href="[##_local_info_link_##]">[##_local_info_title_##]</a></div></s_local_info_rep>
+					</div> -->
+				</s_local>
+
+				<s_tag> <!-- 태그로그 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>태그로그</strong></li>
+							</ul>
+						</div>
+						<div class="subject">태그</div>
+					</div>
+
+					<div class="taglog">
+						<ul><s_tag_rep><li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li></s_tag_rep></ul>
+					</div>
+				</s_tag>
+
+				<s_media> <!-- 미디어로그 -->
+					<script type="text/javascript">window.location.href = "[##_blog_link_##]"</script> <!-- 미디어로그 접근시 메인화면으로 리다이렉트 -->
+					<!-- <div class="medialog">
+						<h3>미디어로그</h3>
+						[##_media_content_##]
+					</div> -->
+				</s_media>
+
+				<s_guest> <!-- 방명록 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>질문하기</strong></li>
+							</ul>
+						</div>
+						<div class="subject">질문하기</div>
+					</div>
+
+					<div class="guestbook">
+							<s_guest_input_form> <!-- 방명록 입력 -->
+								<div class="guestWrite">
+									<s_guest_member>
+										<s_guest_form>
+											<p>
+												<span><label for="name">이름</label><input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" /></span>
+												<span class="password"><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" /></span>
+												<span><label for="homepage">홈페이지</label><input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" /></span>
+											</p>
+										</s_guest_form>
+									</s_guest_member>
+									<p><textarea name="[##_guest_textarea_body_##]" rows="5"></textarea></p>
+									<p><input class="btn_gray" type="submit" value="질문 남기기" onclick="[##_guest_onclick_submit_##]"/></p>
+								</div>
+							</s_guest_input_form>
+							<s_guest_container> <!-- 방명록 출력 -->
+								<div class="guestList">
+									<ol class="box"> 
+										<s_guest_rep>
+											<li id='[##_guest_rep_id_##]'>
+												<div class="[##_guest_rep_class_##]">
+													<span class="name">[##_guest_rep_name_##]</span> 
+													<span class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE</a>  <a href="#" onclick="[##_guest_rep_onclick_reply_##]">REPLY</a></span>
+													<p class="date"> [##_guest_rep_date_##]</p>
+													<p>[##_guest_rep_desc_##]</p>
+												</div>
+												<s_guest_reply_container> <!-- 방명록 댓글 -->
+													<ul>
+														<s_guest_reply_rep>
+															<li id='[##_guest_rep_id_##]'>
+																<div class="[##_guest_rep_class_##]">
+																	<span class="name">[##_guest_rep_name_##]</span> 
+																	<span class="date"> [##_guest_rep_date_##]</span> 
+																	<span class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">
+																	MODIFY/DELETE </a></span>
+																	<p>[##_guest_rep_desc_##]</p>
+																</div>
+															</li>
+														</s_guest_reply_rep>
+													</ul>
+												</s_guest_reply_container>
+											</li>
+										</s_guest_rep>
+									</ol>
+								</div>
+							</s_guest_container>
+					</div>
+				</s_guest>
+
+				<s_notice_rep> <!-- 공지사항 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><a href="/entry">공지사항</a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>[##_notice_rep_title_##]</strong></li>
+							</ul>
+						</div>
+						<div class="subject">공지사항</div>
+					</div>
+
+					<div class="entry entryNotice">
+						<div class="titleWrap box bgbox">
+							<h2><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
+							<span class="category"><a href="/notice">공지사항</a></span>
+							<em>|</em>
+							<span class="date">[##_notice_rep_date_##]</span>
+						</div>
+						<div class="article box">[##_notice_rep_desc_##]</div>
+					</div>
+				</s_notice_rep>
+
+				<s_article_protected> <!-- 비밀글 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>[##_article_rep_title_##]</strong></li>
+							</ul>
+						</div>
+						<div class="subject">블로그</div>
+					</div>
+
+					<div class="entry entryProtected">
+						<div class="titleWrap box bgbox">
+							<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+							<span class="date">[##_article_rep_date_##]</span>
+						</div>
+						<div class="article box">
+							<p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
+							<p>
+								<label for="[##_article_password_##]">비밀번호 ::</label>
+								<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" />
+								<input type="button" class="submit" value="submit" onclick="[##_article_dissolve_##]" />
+							</p>
+						</div>
+					</div>
+				</s_article_protected>
+
+				<s_article_rep> <!-- 포스트 -->
+					<div class="entryTop">
+						<div class="location"> <!-- 위치표시 -->
+							<ul>
+								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
+								<li class="arrow">&gt;</li>
+								<li><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></li>
+								<li class="arrow">&gt;</li>
+								<li><strong>[##_article_rep_title_##]</strong></li>
+							</ul>
+						</div>
+						<div class="subject">[##_article_rep_category_##]</div>
+					</div>
+
+					<div class="entry">
+						<div class="titleWrap box bgbox">
+							<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2> <!-- 글 제목 -->
+							<span class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span> <!-- 글 카테고리 -->
+							<em>|</em>
+							<span class="date">[##_article_rep_date_##]</span> <!-- 글 작성시간 -->
+							<s_ad_div>
+								<div class="admin control">
+									<a href="[##_s_ad_m_link_##]">수정</a> : 
+									<a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a> | 
+									([##_s_ad_s1_label_##])→<a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> | 
+									<a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a> | 
+									<a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+								</div>
+							</s_ad_div>
+						</div>
+
+						<div class="article box">[##_article_rep_desc_##]</div> <!-- 글 본문 -->
+
+						<s_tag_label> <!-- 태그 -->
+							<div class="tagTrail box bgbox"><span class="tagText highlight">태그 </span>[##_tag_label_rep_##]</div>
+						</s_tag_label>
+
+						<div class="button"> <!-- 버튼 -->
+							<div class="social">
+								<a class="facebook"href="http://www.facebook.com/sharer.php?u=http://ludens.kr[##_article_rep_link_##]" target="_blank"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_facebook.png"></a>
+								<a class="twitter"href="http://twitter.com/share?url=http://ludens.kr[##_article_rep_link_##]&text='[##_article_rep_title_##]' by @ludensk" target="_blank"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_twitter.png"></a>
+								<a class="gplus" href="https://plus.google.com/share?url=http://ludens.kr[##_article_rep_link_##]" target="_blank"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_gplus.png"></a>
+							</div>
+							<a class="btn_gray" href="[##_article_rep_category_link_##]">목록</a>
+						</div>
+
+						<div class="actionTrail"> <!-- 트랙백,댓글 갯수 표시 -->
+							<a href="#tb" onclick="[##_article_rep_tb_link_##]"><s_tb_count>트랙백 <span class="cnt">[##_article_rep_tb_cnt_##]</span>개</s_tb_count></a>, 
+							<a href="#rp" onclick="[##_article_rep_rp_link_##]"><s_rp_count>댓글 <span class="cnt">[##_article_rep_rp_cnt_##]</span>개</a>가 달렸습니다.</s_rp_count>
+						</div>
+
+						<s_tb> <!-- 트랙백 -->
+							<div class="trackback">
+								<div class="tbBox box bgbox"><span class="tbText highlight">트랙백</span>[##_tb_address_##]</div>
+								<s_tb_container>
+									<ol class="box">
+										<s_tb_rep>
+											<li id="[##_tb_rep_id_##]">
+												<a href="[##_tb_rep_url_##]" onclick="window.open(this.href); return false" rel="external nofollow" class="tbTitle">[##_tb_rep_title_##]</a> from <span class="name">[##_tb_rep_site_##] </span>
+												<span class="control"><a href="#" onclick="[##_tb_rep_onclick_delete_##]; return false" class="delete"><span>삭제</span></a></span>
+												<p class="date">[##_tb_rep_date_##]</p>
+												<p>[##_tb_rep_desc_##]</p>
+											</li>
+										</s_tb_rep>
+									</ol>
+								</s_tb_container>
+							</div>
+						</s_tb>
+
+						<s_rp> <!-- 댓글 -->
+							<div class="comment">
+								<div class="commentList"> <!-- 댓글 출력 -->
+									<s_rp_container>
+										<ol class="box">
+											<s_rp_rep>
+												<li id='[##_rp_rep_id_##]'>
+													<div class="[##_rp_rep_class_##]">
+														<span class="name">[##_rp_rep_name_##]</span>
+														<span class="control">
+															<a href="[##_rp_rep_link_##]" class="address"><span>댓글주소</span></a>
+															<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify"><span>수정/삭제</span></a>
+															<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write"><span>댓글쓰기</span></a>
+														</span>
+														<p class="date"> [##_rp_rep_date_##]</p>
+														<p>[##_rp_rep_desc_##]</p>
+													</div>
+													<s_rp2_container> 
+														<ul>
+															<s_rp2_rep>
+																<li id='[##_rp_rep_id_##]'>
+																	<div class="[##_rp_rep_class_##]">
+																		<span class="name">[##_rp_rep_name_##]</span>
+																		<span class="date"> [##_rp_rep_date_##]</span>
+																		<span class="control">
+																			<a href="[##_rp_rep_link_##]" class="address"><span>댓글주소</span></a>
+																			<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify"><span>수정/삭제</span></a>
+																		</span>
+																		<p>[##_rp_rep_desc_##]</p>
+																	</div>
+																</li>
+															</s_rp2_rep>
+														</ul>
+													</s_rp2_container>
+												</li>
+											</s_rp_rep>
+										</ol>
+									</s_rp_container>
+								</div>
+								<s_rp_input_form> <!-- 댓글 입력 -->
+									<div class="commentWrite">
+										<s_rp_member>
+											<s_rp_guest>
+												<p>
+													<span><label for="name">이름</label><input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" /></span>
+													<span class="password"><label for="password">비밀번호</label><input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" /></span>
+													<span><label for="homepage">홈페이지</label><input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/></span>
+												</p>
+											</s_rp_guest>
+											<p class="secretWrap"><input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" /><label for="secret"> 비밀글 </label></p>
+										</s_rp_member>
+										<p><textarea name="[##_rp_input_comment_##]" rows="5"></textarea></p>
+										<p><input class="btn_gray" type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" /></p>
+									</div> 
+								</s_rp_input_form>
+							</div>
+						</s_rp>
+					</div>
+				</s_article_rep>
+
+					<s_paging> <!-- 페이징 -->
+						<div class="paging">
+							<a [##_prev_page_##] class="[##_no_more_prev_##] prev">&lt; Previous</a>
+							<span class="numbox"><s_paging_rep><a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a></s_paging_rep></span>
+							<a [##_next_page_##] class="[##_no_more_next_##] next">Next &gt;</a>
+						</div>
+					</s_paging>
+
+				<div id="footer"> <!-- 푸터 -->
+					<ul class="footerMenu">
+						<li><a href="http://www.skplanet.com/" target="_blank">회사소개</a></li>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_Privacy" target="_blank"><strong>개인정보 취급방침</strong></a></li>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal" target="_blank">약관안내</a></li>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_IPR" target="_blank">지적재산보호센터</a></li>
+						<li><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">고객센터</a></li>
+					</ul>
+
+					<p class="copyright"> <!-- 저작권 -->
+						<img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/footer_logo.png" alt="SK planet" align="left">
+						<strong>대표이사 서진우</strong><br>
+						<span>경기도 성남시 분당구 판교로 264 the Planet</span>
+						<span>사업자 등록번호 104-86-36968</span>
+						<span>통신판매업신고 제2014-경기성남-0036호</span>
+					</p>		
+				</div>
+			</div>
+		</div>
+		<s_t3></s_t3> <!-- 티스토리 자바스크립트 -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
+		<script type='text/javascript'>$(function(){$('body').css({'min-height':(($(window).height()))+'px'});$(window).resize(function(){$('body').css({'min-height':(($(window).height()))+'px'})})});</script> <!-- body min-height 설정 -->
+		<script type='text/javascript'>$(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'});$(window).resize(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'})})});$(window).resize(function(){$('.leftCol').css({'min-height':(($(window).height()-130))+'px'})})});</script> <!-- 왼쪽메뉴 height 설정 -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"></script> <!-- equalize.js -->
+		<script>$('#wrapper').equalize();</script>
+	</body>
+</html>
