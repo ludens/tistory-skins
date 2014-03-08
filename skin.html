@@ -21,172 +21,171 @@
 	<body>
 		<div id="header"> <!-- 헤더 -->
 			<h1><a href="[##_blog_link_##]"><img src="[##_image_##]" alt="[##_title_##]" /></a></h1> <!-- 타이틀 -->
+			<div class="blogMenu">[##_blog_menu_##]</div> <!-- 메뉴 -->
+			<div class="clear"></div>
 		</div>
-
-		<div class="blogMenu">[##_blog_menu_##]</div> <!-- 메뉴 -->
-		<div class="clear"></div>
 		
-		<div id="wrapper">
-			<div class="leftCol"> <!-- 왼쪽 메뉴 -->
-				<ul>
-					<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp" target="_blank">Reference</a></li>
-					<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp" target="_blank">Intelligence</a></li>
-					<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp" target="_blank">News</a></li>
-					<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">Help</a></li>
-				</ul>
-			</div>
+		<div id="wrapper"><!--
+			--><div id="aside">
+				<div class="leftCol"> <!-- 왼쪽 메뉴 -->
+					<ul class="nav_d2"> <!--원본 왼쪽 매뉴의 클래스 명을 그대로 사용 -->
+						<li class="reference"><a href="http://dev.tstore.co.kr/devpoc/reference/referenceMain.omp" target="_blank">Reference</a></li>
+						<li class="intelligence"><a href="http://dev.tstore.co.kr/devpoc/support/intelligence/prodRankList.omp" target="_blank">Intelligence</a></li>
+						<li class="news"><a href="http://dev.tstore.co.kr/devpoc/support/news/noticeList.omp" target="_blank">News</a></li>
+						<li class="help"><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">Help</a></li>
+					</ul>
+				</div>
 
-			<div id="sidebar"> <!-- 사이드바 -->
-				<s_sidebar>
-					<s_sidebar_element> 
-					<!-- 블로그 정보 -->
-						<div class="blogInfo widget">
-							<div class="blogImage"><img src="[##_image_##]" alt="" /></div>
-							<div class="blogDesc">[##_desc_##] <span class="userID">[##_blogger_##]</span></div>
-						</div>
-					</s_sidebar_element>
-
-					<s_sidebar_element>
-					<!-- 공지사항 -->
-						<s_rct_notice>
-							<div class="notice widget">
-								<ul><s_rct_notice_rep><li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li></s_rct_notice_rep></ul>
+				<div id="sidebar"> <!-- 사이드바 -->
+					<s_sidebar>
+						<s_sidebar_element> 
+						<!-- 블로그 정보 -->
+							<div class="blogInfo widget">
+								<div class="blogImage"><img src="[##_image_##]" alt="" /></div>
+								<div class="blogDesc">[##_desc_##] <span class="userID">[##_blogger_##]</span></div>
 							</div>
-						</s_rct_notice>
-					</s_sidebar_element>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 관리자 메뉴 -->
-						<div class="adminMenu widget">
-							<ul>
-								<li class="tab_admin"><a href="[##_owner_url_##]">관리자</a></li>
-								<li class="tab_write"><a href="[##_owner_url_##]/entry/post">글쓰기</a></li>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 공지사항 -->
+							<s_rct_notice>
+								<div class="notice widget">
+									<ul><s_rct_notice_rep><li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li></s_rct_notice_rep></ul>
+								</div>
+							</s_rct_notice>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 검색 --> 
-						<div class="search widget"> 
-							<s_search>
-								<input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
-								<input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit"/>
-							</s_search>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 관리자 메뉴 -->
+							<div class="adminMenu widget">
+								<ul>
+									<li class="tab_admin"><a href="[##_owner_url_##]">관리자</a></li>
+									<li class="tab_write"><a href="[##_owner_url_##]/entry/post">글쓰기</a></li>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 카테고리 -->
-						<div class="category widget">
-							<h3>카테고리</h3>
-							[##_category_##]
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 검색 --> 
+							<div class="search widget"> 
+								<s_search>
+									<input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+									<input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit"/>
+								</s_search>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 태그 클라우드 -->
-						<div class="tagbox widget">
-							<h3>태그목록</h3>
-							<ul>
-								<s_random_tags><li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li></s_random_tags>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 카테고리 -->
+							<div class="category widget">
+								<h3>카테고리</h3>
+								[##_category_##]
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 최근에 올라온 글 -->
-						<div class="recentPost widget">
-							<h3>최근에 올라온 글</h3>
-							<ul>
-								<s_rctps_rep>
-									<li><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a> <span class="cnt">[##_rctps_rep_rp_cnt_##]</span></li>
-								</s_rctps_rep>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 태그 클라우드 -->
+							<div class="tagbox widget">
+								<h3>태그목록</h3>
+								<ul>
+									<s_random_tags><li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li></s_random_tags>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 최근에 달린 댓글 -->
-						<div class="recentComment widget">
-							<h3>최근에 달린 댓글</h3>
-							<ul id="recentComments">
-								<s_rctrp_rep>
-									<li>
-										<a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
-										<span class="info_wrap"><span class="name">[##_rctrp_rep_name_##]</span> <span class="date">[##_rctrp_rep_time_##]</span></span>
-									</li>
-								</s_rctrp_rep>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 최근에 올라온 글 -->
+							<div class="recentPost widget">
+								<h3>최근에 올라온 글</h3>
+								<ul>
+									<s_rctps_rep>
+										<li><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a> <span class="cnt">[##_rctps_rep_rp_cnt_##]</span></li>
+									</s_rctps_rep>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 최근에 받은 트랙백 -->
-						<div class="recentTrackback widget">
-							<h3>최근에 받은 트랙백</h3>
-							<ul>
-								<s_rcttb_rep>
-									<li>
-										<a href="[##_rcttb_rep_link_##]">[##_rcttb_rep_desc_##].</a>
-										<span class="info_wrap"><span class="name">[##_rcttb_rep_name_##]</span> <span class="date">[##_rcttb_rep_time_##]</span></span>
-									</li>
-								</s_rcttb_rep>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 최근에 달린 댓글 -->
+							<div class="recentComment widget">
+								<h3>최근에 달린 댓글</h3>
+								<ul id="recentComments">
+									<s_rctrp_rep>
+										<li>
+											<a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
+											<span class="info_wrap"><span class="name">[##_rctrp_rep_name_##]</span> <span class="date">[##_rctrp_rep_time_##]</span></span>
+										</li>
+									</s_rctrp_rep>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 글 보관함 -->
-						<div class="archive widget">
-							<h3>글 보관함</h3>
-							<ul>
-								<s_archive_rep>
-									<li><a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a> <span class="cnt">([##_archive_rep_count_##])</span></li>
-								</s_archive_rep>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 최근에 받은 트랙백 -->
+							<div class="recentTrackback widget">
+								<h3>최근에 받은 트랙백</h3>
+								<ul>
+									<s_rcttb_rep>
+										<li>
+											<a href="[##_rcttb_rep_link_##]">[##_rcttb_rep_desc_##].</a>
+											<span class="info_wrap"><span class="name">[##_rcttb_rep_name_##]</span> <span class="date">[##_rcttb_rep_time_##]</span></span>
+										</li>
+									</s_rcttb_rep>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 달력 -->
-						<div class="calender widget">
-							<h3>달력</h3>
-							[##_calendar_##]
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 글 보관함 -->
+							<div class="archive widget">
+								<h3>글 보관함</h3>
+								<ul>
+									<s_archive_rep>
+										<li><a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a> <span class="cnt">([##_archive_rep_count_##])</span></li>
+									</s_archive_rep>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 링크 -->
-						<div class="link widget">
-							<h3>링크</h3>
-							<ul>
-								<s_link_rep>
-									<li><a href="[##_link_url_##]" onclick="window.open(this.href); return false">[##_link_site_##]</a></li>
-								</s_link_rep>
-							</ul>
-						</div>
-					</s_sidebar_element>
+						<s_sidebar_element>
+						<!-- 달력 -->
+							<div class="calender widget">
+								<h3>달력</h3>
+								[##_calendar_##]
+							</div>
+						</s_sidebar_element>
 
-					<s_sidebar_element>
-					<!-- 방문자수 -->
-						<div class="counte widgetr">
-							<span class="total">Total : [##_count_total_##] </span>
-							<span class="today">Today : [##_count_today_##]</span>
-							<span class="yesterday">Yesterday : [##_count_yesterday_##]</span>
-						</div>
-					</s_sidebar_element>
-				</s_sidebar>
-			</div>
+						<s_sidebar_element>
+						<!-- 링크 -->
+							<div class="link widget">
+								<h3>링크</h3>
+								<ul>
+									<s_link_rep>
+										<li><a href="[##_link_url_##]" onclick="window.open(this.href); return false">[##_link_site_##]</a></li>
+									</s_link_rep>
+								</ul>
+							</div>
+						</s_sidebar_element>
 
-			<div id="content"> <!-- 컨텐츠 -->
+						<s_sidebar_element>
+						<!-- 방문자수 -->
+							<div class="counte widgetr">
+								<span class="total">Total : [##_count_total_##] </span>
+								<span class="today">Today : [##_count_today_##]</span>
+								<span class="yesterday">Yesterday : [##_count_yesterday_##]</span>
+							</div>
+						</s_sidebar_element>
+					</s_sidebar>
+				</div><!--
+			--></div><!--
+
+			--><div class="contentWrap"><div id="content"> <!-- 컨텐츠 -->
 				<s_list> <!-- 글 검색 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>검색결과</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">검색결과</span>
 						</div>
 						<div class="subject">검색결과</div>
 					</div>
@@ -209,11 +208,9 @@
 				<s_tag> <!-- 태그로그 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>태그로그</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">태그로그</span>
 						</div>
 						<div class="subject">태그</div>
 					</div>
@@ -234,11 +231,9 @@
 				<s_guest> <!-- 방명록 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>질문하기</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">질문하기</span>
 						</div>
 						<div class="subject">질문하기</div>
 					</div>
@@ -296,13 +291,11 @@
 				<s_notice_rep> <!-- 공지사항 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><a href="/entry">공지사항</a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>[##_notice_rep_title_##]</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span><a href="/entry">공지사항</a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">[##_notice_rep_title_##]</span>
 						</div>
 						<div class="subject">공지사항</div>
 					</div>
@@ -321,11 +314,9 @@
 				<s_article_protected> <!-- 비밀글 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>[##_article_rep_title_##]</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">[##_article_rep_title_##]</span>
 						</div>
 						<div class="subject">블로그</div>
 					</div>
@@ -349,13 +340,11 @@
 				<s_article_rep> <!-- 포스트 -->
 					<div class="entryTop">
 						<div class="location"> <!-- 위치표시 -->
-							<ul>
-								<li><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></li>
-								<li class="arrow">&gt;</li>
-								<li><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></li>
-								<li class="arrow">&gt;</li>
-								<li><strong>[##_article_rep_title_##]</strong></li>
-							</ul>
+							<span><a href="[##_blog_link_##]"><img src="http://dev.tstore.co.kr/devpoc/static-res/ko/img/ico_home.png" alt="Home"></a></span>
+							<span class="arrow">&gt;</span>
+							<span><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span>
+							<span class="arrow">&gt;</span>
+							<span class="locationNow">[##_article_rep_title_##]</span>
 						</div>
 						<div class="subject">[##_article_rep_category_##]</div>
 					</div>
@@ -485,11 +474,11 @@
 
 				<div id="footer"> <!-- 푸터 -->
 					<ul class="footerMenu">
-						<li><a href="http://www.skplanet.com/" target="_blank">회사소개</a></li>
-						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_Privacy" target="_blank"><strong>개인정보 취급방침</strong></a></li>
-						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal" target="_blank">약관안내</a></li>
-						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_IPR" target="_blank">지적재산보호센터</a></li>
-						<li><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">고객센터</a></li>
+						<li><a href="http://www.skplanet.com/" target="_blank">회사소개</a>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_Privacy" target="_blank"><strong>개인정보 취급방침</strong></a>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal" target="_blank">약관안내</a>
+						<li><a href="http://dev.tstore.co.kr/devpoc/reference/view/Legal_IPR" target="_blank">지적재산보호센터</a>
+						<li><a href="http://dev.tstore.co.kr/devpoc/support/help/helpMain.omp" target="_blank">고객센터</a>
 					</ul>
 
 					<p class="copyright"> <!-- 저작권 -->
@@ -500,13 +489,12 @@
 						<span>통신판매업신고 제2014-경기성남-0036호</span>
 					</p>		
 				</div>
-			</div>
+			</div></div>
 		</div>
+		<div class="bottom"></div>
 		<s_t3></s_t3> <!-- 티스토리 자바스크립트 -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
 		<script type='text/javascript'>$(function(){$('body').css({'min-height':(($(window).height()))+'px'});$(window).resize(function(){$('body').css({'min-height':(($(window).height()))+'px'})})});</script> <!-- body min-height 설정 -->
-		<script type='text/javascript'>$(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'});$(window).resize(function(){$('.leftCol').css({'height':(($(window).height()-130))+'px'})})});$(window).resize(function(){$('.leftCol').css({'min-height':(($(window).height()-130))+'px'})});});</script> <!-- 왼쪽메뉴 height 설정 -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"></script> <!-- equalize.js -->
-		<script>$('#wrapper').equalize();</script>
+		<script type='text/javascript'>$(function(){$('.leftCol').css({'min-height':(($(window).height()))+'px'});$(window).resize(function(){$('.leftCol').css({'min-height':(($(window).height()-130))+'px'})})});$(function(){$('#sidebar').css({'min-height':(($(window).height()-130))+'px'});$(window).resize(function(){$('#sidebar').css({'min-height':(($(window).height()))+'px'})});});</script>  <!-- 왼쪽메뉴 min-height 설정 -->
 	</body>
 </html>
