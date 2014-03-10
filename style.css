@@ -28,16 +28,21 @@ body { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body
 #aside>div { float: left; }
 
 /* 왼쪽메뉴 */
-.leftCol { width: 30%; max-width: 75px; border-right: 1px solid #eaeaea; background: #eaeaea; text-align: center; padding: 30px 5px;; }
+.leftCol { width: 30%; max-width: 75px; border-right: 1px solid #eaeaea; background: #eaeaea; text-align: center; padding: 30px 0px;; }
 .leftCol li { margin-bottom: 15px; }
 .leftCol a { display: block; font-weight: 700; background-position: center 0; background-repeat: no-repeat; padding: 40px 0 10px; letter-spacing: -1px; }
-.leftCol a:hover { color: #dc0000; }
+.leftCol a:hover { color: #dc0000; }			
 .leftCol .reference a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support1.png'); }
 .leftCol .intelligence a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support2.png'); }
-.leftCol .news a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3.png'); }
+.leftCol .news a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3_on.png'); }
 .leftCol .help a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support4.png'); }
+.leftCol .nav_d2 > .on a {border-top:1px solid #c9c9c9; border-bottom:1px solid #d9d8d8; background-color:#fafafa; z-index:2; position:relative; background-position:center center; background-repeat:no-repeat; min-height:85px;}
+.leftCol .nav_d2 > .on:first-child a {border-top:none;}
+.leftCol .nav_d2 > .on a span {visibility:hidden}
+
 /* 왼쪽메뉴 hover 코드 삭제 */
 /*
+.leftCol .news a { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3.png'); }
 .leftCol .reference a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support1_on.png'); }
 .leftCol .intelligence a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support2_on.png'); }
 .leftCol .news a:hover { background-image: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/lnb_support3_on.png'); }
