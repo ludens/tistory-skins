@@ -62,7 +62,7 @@ body { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body
 
 /* 컨텐츠 */
 .contentWrap { background: #fff; border-right: 1px solid #d1d1d1; border-bottom: 1px solid #d1d1d1; }
-#content { width: 75%; max-width: 1020px; min-height: 800px; display: inline-block; padding-left: 240px; background: #fff; }
+#content { width: 95%; max-width: 1020px; min-height: 800px; display: inline-block; padding-left: 240px; background: #fff; }
 #content .entry { margin: 20px 25px; }
 
 /* 글 상단 */
