@@ -81,6 +81,7 @@ body { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body
 /* 글 본문 */
 div.article { padding: 30px 20px; border-top: 0; margin-bottom: 5px; }
 .article p,.article ul,.article ol { margin-bottom: 1em; }
+.article img { max-width: 100%; height: auto; }
 
 /* 글 태그 출력 */
 .tagTrail { margin-bottom: 15px; color: #fbfbfb; }
