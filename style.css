@@ -10,9 +10,9 @@ input[type="text"]:focus,input[type="password"]:focus,textarea:focus { border-co
 body { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body.png'); }
 
 /* 상단 로고이미지 */
-#header { position: fixed; width: 100%; padding: 0 20px; background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body.png'); }
+#header { position: fixed; width: 100%; padding: 0 20px;  z-index: 9; background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_body.png'); }
 #header h1 { padding: 12px 0; }
-#header h1 img { height: 21px; width: auto; z-index: 9; }
+#header h1 img { height: 21px; width: auto;}
 
 /* 블로그 메뉴 */
 .blogMenu { background: url('http://dev.tstore.co.kr/devpoc/static-res/ko/img/bg_gnb.png'); }
