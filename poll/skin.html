@@ -1,0 +1,412 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+
+	<title>[##_title_##] :: [##_page_title_##]</title>
+
+	<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
+	<link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,400italic|Raleway:100,200,300">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+	<link rel="stylesheet" href="//poll.pt/css/style.css">
+	<link rel="stylesheet" href="./style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header id="head-nav" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="fa fa-gear"></span></button>
+				<a class="navbar-brand" href="[##_blog_link_##]"><span>[##_title_##]</span></a> <!-- 블로그제목 -->
+			</div>
+			<nav class="navbar-collapse collapse"> <!-- 블로그메뉴 -->
+				<ul class="nav navbar-nav">
+					<li><a href="http://poll.pt">Home</a></li>
+					<li><a href="http://poll.pt/#howitworks">About</a></li>
+					<li><a href="http://poll.pt/#contact">Contact us</a></li>
+					<li class="active"><a href="[##_blog_link_##]">Blog</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="cl-wrapper">
+		<aside class="cl-sidebar"> <!-- 왼쪽 위젯영역 -->
+			<div class="cl-toggle"><i class="fa fa-bars"></i></div>
+			<div class="cl-navblock">
+				<div class="menu-space">
+					<div class="content">
+						<div class="cl-vnavigation">
+							<h3>카테고리</h3>
+							[##_category_list_##]
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-right collapse-button" style="padding:7px 9px;">
+				<s_search> <!-- 검색 -->
+					<input class="form-control search" id="s" type="text" name="[##_search_name_##]" value="Type + Enter" onfocus="this.value = this.value=='Type + Enter'?'':this.value;" onblur="this.value = this.value==''?'Type + Enter':this.value;" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+					<button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;" class="fa fa-angle-left"></i></button>
+				</s_search>
+			</div>
+		</aside>
+		<main role="main" id="pcont" class="container-fluid">
+			<s_list> <!-- 글 검색결과 -->
+				<div class="searchList">
+					<div class="page-head"><h2><mark>[##_list_conform_##]</mark>에 해당되는 글 [##_list_count_##]건</h2></div>
+					<div class="cl-mcont no-padding-bottom">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="content">
+										<div class="list-group">
+											<s_list_rep>
+												<a class="list-group-item" href="[##_list_rep_link_##]">[##_list_rep_title_##]<span class="badge">[##_list_rep_regdate_##]</span></a>
+											</s_list_rep>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</s_list>
+			<s_local> <!-- 위치로그 -->
+				<div class="localog">
+					<div class="page-head"><h2><i class="fa fa-map-marker"></i> 위치로그</h2></div>
+					<div class="cl-mcont no-padding-bottom">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="content">
+										<s_local_spot_rep>
+											<div class="spot" style="margin-left: [##_local_spot_depth_##]px"><i class="fa fa-location-arrow"></i> [##_local_spot_##]</div>
+										</s_local_spot_rep>
+										<s_local_info_rep>
+											<div class="info" style="margin-left: [##_local_info_depth_##]px"><i class="fa fa-map-marker"></i> <a href="[##_local_info_link_##]">[##_local_info_title_##]</a></div>
+										</s_local_info_rep>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</s_local>
+			<s_tag> <!-- 태그로그 -->
+				<div class="taglog">					
+					<div class="page-head"><h2><i class="fa fa-tags"></i> 태그</h2></div>
+					<div class="cl-mcont no-padding-bottom">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="content">
+										<s_tag_rep>
+											<span class="badge badge-primary"><a class="color-white" href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></span>
+										</s_tag_rep>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</s_tag>
+			<s_guest> <!-- 방명록 -->
+				<div class="guestbook">
+					<div class="page-head"><h2><i class="fa fa-comments"></i> 방명록</h2></div>
+					<div class="cl-mcont">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="content">
+										<s_guest_container> <!-- 방명록 리스트 -->
+											<div class="guestList">
+												<ol>
+													<s_guest_rep>
+														<li id='[##_guest_rep_id_##]'>
+															<div class="[##_guest_rep_class_##]">
+																<span class="name">[##_guest_rep_name_##]</span>
+																<span class="date"> [##_guest_rep_date_##]</span>
+																<span class="control">
+																<a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE</a>
+																<a href="#" onclick="[##_guest_rep_onclick_reply_##]">REPLY</a>
+																</span>
+																<p>[##_guest_rep_desc_##]</p>
+															</div>
+															<s_guest_reply_container>
+																<ul>
+																	<s_guest_reply_rep>
+																		<li id='[##_guest_rep_id_##]'>
+																			<div class="[##_guest_rep_class_##]">
+																				<span class="name">[##_guest_rep_name_##]</span>
+																				<span class="date"> [##_guest_rep_date_##]</span>
+																				<span class="control">
+																				<a href="#" onclick="[##_guest_rep_onclick_delete_##]">
+																				MODIFY/DELETE </a>
+																				</span>
+																				<p>[##_guest_rep_desc_##]</p>
+																			</div>
+																		</li>
+																	</s_guest_reply_rep>
+																</ul>
+															</s_guest_reply_container>
+														</li>
+													</s_guest_rep>
+												</ol>
+											</div>
+										</s_guest_container>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<div class="block">
+									<div class="content">
+										<s_guest_input_form> <!-- 방명록 글쓰기 -->
+											<div class="guestWrite">
+												<s_guest_member>
+													<s_guest_form>
+														<p>
+															<input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" /> <label for="name"> : 이름 </label>
+															<br/>
+															<input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" /> <label for="password"> : 패스워드 </label>
+															<br/>
+															<input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" /> <label for="homepage"> : 홈페이지 </label>
+														</p>
+													</s_guest_form>
+												</s_guest_member>
+												<p><textarea name="[##_guest_textarea_body_##]" rows="6"></textarea></p>
+												<p><input class="btn btn-primary" type="submit" value="안부 남기기" onclick="[##_guest_onclick_submit_##]"/></p>
+											</div>
+										</s_guest_input_form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</s_guest>
+			<s_notice_rep> <!-- 공지사항 -->
+				<article class="entryNotice">
+					<div class="titleWrap page-head">
+						<h2><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
+						<ol class="breadcrumb">
+							<li class="category">공지사항</li>
+							<li class="date">[##_notice_rep_date_##]</li>
+						</ol>
+					</div>
+					<div class="cl-mcont">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="content">
+										<div class="article">[##_notice_rep_desc_##]</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</s_notice_rep>
+			<s_article_protected> <!-- 비밀글 -->
+				<article class="entryProtected">
+					<div class="titleWrap page-head">
+						<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+						<ol class="breadcrumb">
+							<li class="date">[##_article_rep_date_##]</li>
+						</ol>
+					</div>
+					<div class="cl-mcont">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="header"><h3>비밀글입니다. 내용을 보시려면 비밀번호를 입력하세요.</h3></div>
+									<div class="article content">
+										<p>
+											<label for="[##_article_password_##]">비밀번호 :</label>
+											<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" />
+											<input class="btn btn-primary" type="button" class="submit" value="submit" onclick="[##_article_dissolve_##]" />
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</s_article_protected>
+			<s_article_rep> <!-- 글 -->
+				<article class="entry">
+					<div class="titleWrap page-head">
+						<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+						<ol class="breadcrumb">
+							<li class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></li>
+							<li class="date">[##_article_rep_date_##]</li>
+						</ol>
+						<s_ad_div>
+							<ol class="admin breadcrumb">
+								<li><a href="[##_s_ad_m_link_##]">수정</a></li>
+								<li><a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a></li>
+								<li><a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a></li>
+								<li><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a></li>
+							</ol>
+						</s_ad_div>
+					</div>
+					<div class="cl-mcont">
+						<div class="row">
+							<div class="col-sm-12 col-md-8">
+								<div class="block">
+									<div class="article content">[##_article_rep_desc_##]</div> <!-- 글 본문 -->
+									<div class="content no-padding-top">
+										<div class="actionTrail pull-right"> <!-- 트랙백, 댓글 갯수 출력 -->
+											<span class="badge badge-primary">
+												<a class="color-white" href="#tb" onclick="[##_article_rep_tb_link_##]"><s_tb_count><i class="fa fa-share"></i> Trackback: [##_article_rep_tb_cnt_##]</s_tb_count></a>
+											</span>
+											<span class="badge badge-success">
+												<a class="color-white" href="#rp" onclick="[##_article_rep_rp_link_##]"><s_rp_count><i class="fa fa-comment"></i> Comment: [##_article_rep_rp_cnt_##]</s_rp_count></a>
+											</span>
+										</div>
+										<s_tag_label> <!-- 태그 출력 -->
+											<div class="tagTrail">
+												<span class="tagText"><i class="fa fa-tags"></i></span> [##_tag_label_rep_##]
+											</div>
+										</s_tag_label>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-4">
+								<s_tb> <!-- 트랙백 출력 -->
+									<div class="trackback block">
+											<div class="header">
+												<h2><i class="fa fa-share"></i>Trackbacks</h2>
+											</div>
+											<div class="content">
+												<s_tb_container>
+													<h4><i class="fa fa-link"></i> [##_tb_address_##]</h4>
+													<ol class="list-group tickets">
+														<s_tb_rep>
+															<li class="list-group-item" id="[##_tb_rep_id_##]">
+																<h4 class="name"><a href="[##_tb_rep_url_##]" onclick="window.open(this.href); return false" rel="external nofollow">[##_tb_rep_title_##]</a></h4>
+																<div class="date">Tracked from [##_tb_rep_site_##] / [##_tb_rep_date_##] <a href="#" onclick="[##_tb_rep_onclick_delete_##]; return false" class="delete"><i class="fa fa-chain-broken"></i></a></div>
+																<p>[##_tb_rep_desc_##]</p>
+															</li>
+														</s_tb_rep>
+													</ol>
+												</s_tb_container>
+											</div>
+									</div>
+								</s_tb>
+								<s_rp> <!-- 댓글 출력 -->
+										<div class="comment block">
+											<div class="header">
+												<h2><i class="fa fa-comment"></i>Comments</h2>
+											</div>
+											<div class="commentList content no-padding-bottom"> <!-- 댓글 목록 -->
+												<s_rp_container>
+													<ol class="list-group tickets">
+														<s_rp_rep>
+															<li class="list-group-item" id='[##_rp_rep_id_##]'>
+																<div class="[##_rp_rep_class_##]">
+																	<h4 class="name">[##_rp_rep_name_##]</h4>
+																	<span class="date"> [##_rp_rep_date_##]</span>
+																	<span class="control">
+																	<a href="[##_rp_rep_link_##]" class="address"><i class="fa fa-link"></i></a>
+																	<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify"><i class="fa fa-times"></i></a>
+																	<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write"><i class="fa fa-comments"></i></a>
+																	</span>
+																	<p>[##_rp_rep_desc_##]</p>
+																</div>
+																<s_rp2_container>
+																	<ul class="list-group clear">
+																		<s_rp2_rep>
+																			<li class="list-group-item" id='[##_rp_rep_id_##]'>
+																				<div class="[##_rp_rep_class_##]">
+																				<h4 class="name">[##_rp_rep_name_##]</h4>
+																				<span class="date"> [##_rp_rep_date_##]</span>
+																				<span class="control">
+																				<a href="[##_rp_rep_link_##]" class="address"><i class="fa fa-link"></i></a>
+																				<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify"><i class="fa fa-times"></i></a>
+																				</span>
+																				<p>[##_rp_rep_desc_##]</p>
+																				</div>
+																			</li>
+																		</s_rp2_rep>
+																	</ul>
+																</s_rp2_container>
+															</li>
+														</s_rp_rep>
+													</ol>
+												</s_rp_container>
+											</div>
+											<hr>
+											<s_rp_input_form> <!-- 댓글 쓰기 -->
+												<div class="commentWrite content">
+													<s_rp_member>
+														<s_rp_guest>
+															<p><input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+															<label for="name"> : 이름 </label>
+															<br/>
+															<input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" />
+															<label for="password"> : 패스워드 </label>
+															<br/>
+															<input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/>
+															<label for="homepage"> : 홈페이지 </label>
+															</p>
+														</s_rp_guest>
+														<p class="secretWrap">
+															<input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" />
+															<label for="secret"> 비밀글 </label>
+														</p>
+													</s_rp_member>
+													<p><textarea name="[##_rp_input_comment_##]" rows="10"></textarea></p>
+													<p><input class="btn btn-primary" type="submit" value="댓글 달기" onclick="[##_rp_onclick_submit_##]" /></p>
+												</div>
+											</s_rp_input_form>
+										</div>
+								</s_rp>
+							</div>
+						</div>
+					</div>
+				</article>
+			</s_article_rep>
+			<footer class="cl-mcont no-padding-top">
+				<div class="row">
+					<div class="col-sm-12 col-md-8">
+						<div class="block text-center">
+							<s_paging> <!-- 페이징 -->
+								<ul class="pagination content">
+									<li><a [##_prev_page_##] class="[##_no_more_prev_##]">◀ PREV </a></li>
+									<s_paging_rep><li><a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a></li></s_paging_rep>
+									<li><a [##_next_page_##] class="[##_no_more_next_##]">NEXT ▶</a></li>
+								</ul>
+							</s_paging>
+						</div>
+						<div class="block">
+							<div class="content">
+								<div class="copyright">
+									<a href="[##_blog_link_##]"> [##_blogger_##]</a>’s Blog is powered by <a href="http://www.tistory.com/" onclick="window.open(this.href); return false">[##_tattertools_name_##] [##_tattertools_version_##]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
+	</div>
+	<s_t3></s_t3>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//poll.pt/js/behaviour/general.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

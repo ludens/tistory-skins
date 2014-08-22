@@ -1,0 +1,22 @@
+body, .page-head h2 { font-family: "Open Sans","Nanum Gothic",sans-serif; overflow-x: hidden; } /* body 나눔고딕 적용 */
+.block-flat .header h3 { font-family: "Raleway",Helvetica,"Nanum Gothic",sans-serif; font-size: 18px; } /* 카드 소제목 나눔고딕 적용, 폰트크기 수정 */
+.imageblock, article img { max-width: 100%; height: auto; } /* 본문 이미지 반응형 적용 */
+hr { border-color: #ccc; }
+textarea { width: 100%; } /* textarea 반응형 적용 */
+
+article .cl-mcont { padding-bottom: 0; } /* 글 하단 여백 제거 */
+article .page-head h2 a { color: #555; } /* 글 제목 색상 수정 */
+article .page-head h2 a:hover { text-decoration: underline; } /* 글 제목 마우스오버 효과 추가 */
+.pagination .interword { position: relative; float: left; padding: 6px 12px; margin-left: -1px; line-height: 1.42857; color: #428BCA; text-decoration: none; background-color: #FFF; border: 1px solid #DDD; } /* 페이징 … 수정 */
+.pagination .no-more-prev, .pagination .no-more-next, .pagination .selected { color: #555; } /* 링크없는 페이징버튼 수정 */
+
+.trackback h4 span a { display: none; } /* 트랙백 관련글쓰기 버튼 제거 */
+.list-group.tickets .list-group-item p { line-height: 1.3; } /* 댓글 본문 줄간격 수정 */
+.name img { float: left; margin-right: 10px; border-radius: 50%; } /* 댓글 아바타 수정 */
+.list-group.tickets .list-group-item .list-group { padding-left: 1em; } /* 댓글의 댓글 왼쪽여백 추가 */
+.list-group.tickets .list-group-item .list-group-item { border-top: 1px solid #ccc; margin-top: 1.5em; border-radius: 0; }  /* 댓글의 댓글 구분선 추가 */
+
+.cl-sidebar h3 { color: #fff; }
+.no-padding-top { pading-top: 0 !important; }
+.no-padding-bottom { padding-bottom: 0 !important; }
+.color-white { color: #fff !important; }
